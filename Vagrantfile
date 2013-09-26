@@ -15,6 +15,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.hostname = "centos-64"
 
+  config.berkshelf.enabled = true
+
   config.vm.provision :chef_solo do |chef|
 
     chef.cookbooks_path = "cookbooks"
